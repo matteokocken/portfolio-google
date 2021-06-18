@@ -1,0 +1,151 @@
+@font-face 
+    font-family: "Product_Sans_Regular"
+    src: url('../assets/fonts/Product_Sans_Regular.ttf')
+
+    
+h1
+    font-size: 5.35em
+    letter-spacing: 1px
+    font-family: 'Product_Sans_Regular'
+    padding-bottom: 20px
+    text-align: center
+.search--container
+    position: relative
+    max-width: 584px
+    width: 80%
+    margin: auto
+    border-radius: 24px
+.isActive
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28)
+    border-color: rgba(223,225,229,0)
+    .search--button
+        margin-top: 11px
+        > button:hover
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, .1) 
+.noActive
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28)
+    border-color: rgba(223,225,229,0)
+.search--container--input
+    height: 44px
+    display: grid
+    grid-template-columns: 30px 1fr 48px
+    align-items: center
+    justify-content: stretch
+    padding-left: 14px
+    border-radius: 24px
+    box-shadow: none
+    position: relative
+    z-index: 3
+
+.isTyping
+    border-bottom-right-radius: 0px !important
+    border-bottom-left-radius: 0px !important
+    border-bottom: none !important
+
+    
+.search--container--label
+    padding-right: 13px
+    margin-top: 3px
+
+.search--container--vocal
+    width: 40px
+    border: none
+    background-color: transparent
+.search--container--input2
+    border: none
+    outline: none
+    font-size: 16px
+    height: 34px
+    font-family: arial
+    color: rgba(0,0,0,.87)
+
+.letter-blue
+    color: #4285f4
+.letter-red
+    color: #ea4335
+.letter-yellow
+    color: #fbbc05
+.letter-green
+    color: #34a853
+
+.search--button
+    margin-top: 29px
+    display: grid
+    height: 36px
+    grid-auto-flow: column
+    grid-gap: 8px
+    justify-content: center
+    margin-bottom: 20px
+    > button
+        min-width: 54px
+        color: #3c4043
+        background-color: #f8f9fa
+        border: 1px solid #f8f9fa
+        border-radius: 4px
+        font-size: 14px
+        padding: 0 16px
+        cursor: pointer
+        user-select: none
+        &:hover
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1)
+            background-color: #f8f9fa
+            border: 1px solid #dadce0
+            color: #202124
+
+.isActive
+    border-bottom-left-radius: 0px
+    border-bottom-right-radius: 0px
+    .search--container--input
+        border-bottom-left-radius: 0px
+        border-bottom-right-radius: 0px
+        border-bottom: none
+
+.search--text
+    display: inline-block
+    line-height: 28px
+    color: #222
+    font-family: arial,sans-serif
+    font-size: small
+    display: block
+    text-align: center
+    a
+        text-decoration: none
+.search--container--result
+    position: absolute
+    box-shadow: 0 4px 6px rgba(32,33,36,.28)
+    margin: auto
+    width: 100%
+    background-color: #ffffff
+    border-bottom-right-radius: 24px
+    border-bottom-left-radius: 24px
+    margin: auto
+    z-index: 2
+    border-top: none
+    padding-top: 4px
+    margin-top: -1px
+
+    > div
+        &::before
+            content: ''
+            left: 14px
+            right: 20px
+            top: 0px
+            height: 1px
+            position: absolute
+            background-color: #e8eaed
+        > ul
+            
+            list-style: none
+            padding-bottom: 8px
+            li
+                font-size: 16px
+                font-family: arial
+                padding: 6px 0px
+                display: grid
+                grid-template-columns: 30px 1fr
+                padding-left: 14px
+
+                &:hover
+                    background-color: #eee
+                > span 
+                    font-weight: bold

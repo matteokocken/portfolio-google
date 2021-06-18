@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap')
+header
+    position: relative
+header > div:nth-child(1)
+    display: grid
+    grid-auto-flow: column
+    justify-content: end
+    grid-gap: 16px
+    height: 48px
+    align-items: center
+    padding-top: 6px
+    padding-right: 24px
+.header--link, .header--btn
+    display: grid
+    grid-auto-flow: column
+    grid-gap: 15px
+    font-family: arial
+    > *
+        color: rgba(0, 0, 0, 0.87)
+        text-decoration: none
+        line-height: 24px
+        font-size: 13px
+    > button > div 
+        width: 32px
+        height: 32px
+        line-height: 32px
+        font-size: 16px
+.header--btn 
+    grid-gap: 4px
+.header--link > a:hover 
+    text-decoration: underline
+
+.header--btn__app
+    border: none
+    background-color: white
+    display: grid
+    align-items: center
+    color: #5f6368
+    cursor: pointer
+    width: 40px
+    height: 40px
+    justify-content: center
+    border-radius: 100px
+    &:hover
+        background-color: rgba(60, 64, 67, 0.08)
+    &:focus
+        background-color: rgba(95,99,104,0.24)
+.header--btn__img
+    border: none
+    background-color: white
+    display: grid
+    align-items: center
+    cursor: pointer
+    width: 40px
+    height: 40px
+    justify-content: center
+    border-radius: 100px
+    &:hover
+        background-color: rgba(60, 64, 67, 0.08)
+    &:focus
+        background-color: rgba(95,99,104,0.24)
+    > img
+        border-radius: 100px
+        width: 32px
+        height: 32px
+
+.header--apps, .header--profil
+    width: 318px
+    border: 1px solid rgba(0,0,0,0.2)
+    box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 2px 6px 2px rgba(60, 64, 67, 0.15)
+    border-radius: 8px
+    overflow-y: scroll
+    position: absolute
+    z-index: 5
+    top: 57px
+    right: 20px
+    padding: 9px
+    grid-gap: 12px
+    background-color: white
+
+.header--apps
+    display: grid
+    height: 438px
+    grid-template-columns: 1fr 1fr 1fr
+    align-items: center
+
+.header--profil
+    overflow-y: hidden
+    padding: 20px 33px
+
+
+.header--apps__app
+    margin: auto
+    width: 84px
+    height: 84px
+    padding: 6px
+    border-radius: 8px
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    cursor: pointer
+    font-family: arial
+    font-size: 14px
+    letter-spacing: 0.09px
+    &:hover
+        background-color: #e8f0fe
+    img
+        height: calc(100% - 16px)
+        object-fit: cover
+        width: 100%
+        border-top-right-radius: 8px
+        border-top-left-radius: 8px
+.profil--image
+    width: 63px
+    height: 63px
+    line-height: 63px
+    border-radius: 100%
+    display: grid
+    background-color: #f45b69
+    align-items: center
+    text-align: center
+    font-size: 27px
+    font-family: "Montserrat", arial
+    font-weight: 900
+    color: #fff
+    margin: auto
+    display: block
+.profil--name
+    font-family: "Montserrat", arial
+    font-weight: 600
+    text-align: center
+    margin-top: 10px
+    font-size: 20px
+
+.profil--email
+    font-family: "Montserrat", arial
+    font-weight: 500
+    text-align: center
+    margin-top: 10px
+.profil--btn
+    padding: 10px 23px
+    border-radius: 5px
+    font-weight: 600
+    font-family: "Montserrat",arial
+    font-size: 16px
+    text-decoration: none
+    text-transform: uppercase
+    background-color: #fff
+    cursor: pointer
+    border: solid 2px #f45b69
+    color: #f45b69
+    margin: auto
+    display: block
+    margin-top: 20px
+    margin-bottom: 20px
+    transition: .4s
+    &:hover
+            color: #fff
+            background-color: #f45b69
+.profil--localisation, .profil--info
+    text-align: center
+    font-family: 'Montserrat', Arial
+    font-size: 16px
+    font-weight: 500
+    margin-bottom: 10px
+
+.profil--info
+    color: #5ed3f3
+    background-color: #212121
+    padding: 10px
+    border-radius: 8px
+    vertical-align: baseline
+    display: grid
+    grid-auto-flow: column
+    align-items: center
+    justify-content: center
+    grid-gap: 10px
+    margin-top: 20px
+    margin-bottom: 10px
