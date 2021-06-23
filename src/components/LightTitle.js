@@ -7,6 +7,7 @@ const LightTitle = ({ word }) => {
 
     useEffect(() => {
         const updateTitle = () => {
+            const newArray = [];
             const colorTitle = ['blue', 'red', 'yellow', 'blue', 'green', 'red', 'yellow', 'green', 'red', 'blue', 'green', 'yellow'];
             let index = 0;
             for(let i = 0; i < t.length; i++) {
@@ -14,8 +15,9 @@ const LightTitle = ({ word }) => {
                     index++;
                 };
                 const newValue = <span key={i} className={`letter-${colorTitle[i - index]}`}>{t[i]}</span>
-                setTitle(prevArray => [...prevArray, newValue]);
+                newArray.push(newValue);
             }
+            setTitle(newArray);
         };
         updateTitle();
     }, [t]);
