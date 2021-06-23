@@ -30,8 +30,8 @@ const Search = () => {
             <div className="result--nbr">Environ {result.length} résultat{result.length > 1? "s": ""} (0,{Math.floor(Math.random()* 10 + 5)} secondes)</div>
             {
                 result.length === 0? <p>Aucun résultat</p>:
-                result.map(( { name, link, description }, i ) => 
-                    <SearchItem key={i} url={link} title={name} description={description? description: "Aucune description"} />
+                result.map(( { name, link, description, linkExt }, i ) => 
+                    <SearchItem key={i} url={link} title={name} linkExt={linkExt} description={description? description: "Aucune description"} />
                 )
             }
         </>

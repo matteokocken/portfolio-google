@@ -9,7 +9,7 @@ const OpenProfil = ({ refProfil, clickProfil }) => {
             <div className="profil--name">Mattéo Kocken</div>
             <div className="profil--info">Développeur React.JS <GrReactjs /></div>
             <div className="profil--email">matteokocken@gmail.com</div>
-            <button className="profil--btn">Me Contacter</button>
+            <a style={{textAlign: 'center'}} href='mailto:matteokocken@gmail.com' className="profil--btn">Me Contacter</a>
             <div className="profil--localisation">Poitiers (86), France</div>
         </div>
     );
