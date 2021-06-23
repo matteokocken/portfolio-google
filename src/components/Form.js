@@ -6,7 +6,8 @@ import SearchList from './SearchList';
 
 
 const Form = () => {
-    const [title, setTitle] = useState('Matteo');
+    const t = "Matteo"
+    const [title, setTitle] = useState();
     const [colorTitle, setColorTitle] = useState([]);
 
     const { inputActive, refInput, inputIn, updateInput, displayData, search } = useForm(null);
@@ -16,8 +17,8 @@ const Form = () => {
     }, []);
     useEffect(() => {
         let newTitle = [];
-        for(let i = 0; i < title.length; i++) {
-            newTitle.push(<span key={i} className={`letter-${colorTitle[i]}`}>{title[i]}</span>)
+        for(let i = 0; i < t.length; i++) {
+            newTitle.push(<span key={i} className={`letter-${colorTitle[i]}`}>{t[i]}</span>)
         }
         setTitle(newTitle);
     }, [colorTitle]);

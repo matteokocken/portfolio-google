@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { MdSearch } from "react-icons/md";
 import { IoApps } from "react-icons/io5";
 import { useParams } from 'react-router-dom';
@@ -8,27 +8,17 @@ import HomeContext from './../contexts/HomeContext';
 import OpenApps from './OpenApps';
 import OpenProfil from './OpenProfil';
 import { Link } from 'react-router-dom';
+import LightTitle from './LightTitle';
 const HeaderSearch = ( { research } ) => {
 
     const { search } = useParams();
 
     const { isAppOpen, isProfilOpen, refApp, refProfil, clickApp, clickProfil } = useContext(HomeContext);
 
-    const [title, setTitle] = useState('Matteo');
-    const colorTitle = ['blue', 'red', 'yellow', 'blue', 'green', 'red'];
-
-    useEffect(() => {
-        let newTitle = [];
-        for(let i = 0; i < title.length; i++) {
-            newTitle.push(<span key={i} className={`letter-${colorTitle[i]}`}>{title[i]}</span>)
-        }
-        setTitle(newTitle);
-    }, []);
-
     return (
         <>
             <div className='header--search--title'>
-                <Link to="/" className="header--title">{title}</Link>
+                <Link to="/" className="header--title"><LightTitle word='Matteo' /></Link>
                 <div className="header--input" style={{ maxWidth: 692}}>
                     <div className="text">{ research }</div>
                     <MdSearch size={24} color={'#4285f4'} />
