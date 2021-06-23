@@ -1,8 +1,19 @@
 [
     {
-        "name": "Portfolio",
-        "altText": "portfolio",
-        "link": "/portfolio"
+        "name": "Profil",
+        "altText": "profil",
+        "link": "/profil",
+        "description": "Mattéo Kocken \n Développeur & Intégrateur web. \n React.JS"
+    },
+    {
+        "name": "Compétences",
+        "altText": "compétences competence skills",
+        "link": "/skills"
+    },
+    {
+        "name": "Réalisations",
+        "altText": "realisation réalisations projet création creation",
+        "link": "/realisations"
     },
     {
         "name": "Linkedin",
@@ -11,28 +22,13 @@
         "linkExt": true
     },
     {
-        "name": "Profil",
-        "altText": "profil",
-        "link": "/profil"
-    },
-    {
-        "name": "Mentions légales",
-        "altText": "mentions legales mentions legales mention legale",
-        "link": "/mentions-legales"
-    },
-    {
         "name": "À propos",
         "altText": "à propos a propos",
         "link": "/a-propos"
     },
     {
-        "name": "Comment fonctionne cette page ?",
-        "altText": "fonctionnment comment ça marche comment fonctionne cette page",
-        "link": "/fonctionnement"
-    },
-    {
         "name": "Je veux créer mon portfolio",
-        "altText": "je veux créer mon portfolio je veux creer mon portfolio",
+        "altText": "je veux créer mon portfolio je veux creer mon portfolio création portfolio creation portfolio",
         "link": "/creer-portfolio"
     },
     {
@@ -47,13 +43,8 @@
         "linkExt": true
     },
     {
-        "name": "Compétences",
-        "altText": "compétences competence skills",
-        "link": "/skills"
-    },
-    {
-        "name": "Réalisation",
-        "altText": "realisation projet création creation",
-        "link": "/realisations"
+        "name": "Mentions légales",
+        "altText": "mentions legales mentions legales mention legale mentions-legales",
+        "link": "/mentions-legales"
     }
 ]

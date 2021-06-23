@@ -27,6 +27,13 @@ const useForm = () => {
         setInputData(e.target.value);
     }
 
+    const search = (e) => {
+        e.preventDefault();
+        if(inputData !== "") {
+            window.location.href = '/search/' + inputData;
+        }
+    }
+
     useEffect(() => {
         const readData = () => {
             const text = inputData.toLowerCase(); 
@@ -45,7 +52,7 @@ const useForm = () => {
         }
     });
 
-    return { inputActive, refInput, inputIn, displayData, updateInput };
+    return { inputActive, refInput, inputIn, displayData, updateInput, search };
 }
 
 export default useForm;

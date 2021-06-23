@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../sass/Form.sass';
 import { MdSearch, MdMic } from "react-icons/md";
 import useForm from './../hooks/useForm';
@@ -7,31 +7,24 @@ import SearchList from './SearchList';
 
 const Form = () => {
     const [title, setTitle] = useState('Matteo');
-    const [colorTitle, setColorTitle] = useState(['blue', 'red', 'yellow', 'blue', 'green', 'red']);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
-    const refSearch = useRef(null);
+    const [colorTitle, setColorTitle] = useState([]);
 
-    const { inputActive, refInput, inputIn, updateInput, displayData } = useForm(null);
+    const { inputActive, refInput, inputIn, updateInput, displayData, search } = useForm(null);
 
     useEffect(() => {
-        document.addEventListener('click', (e) => {
-            if (refSearch.current && !refSearch.current.contains(e.target)) {
-                setIsSearchOpen(false);
-            }
-        }, true);
-    });
-
+        setColorTitle(['blue', 'red', 'yellow', 'blue', 'green', 'red']);
+    }, []);
     useEffect(() => {
         let newTitle = [];
         for(let i = 0; i < title.length; i++) {
             newTitle.push(<span key={i} className={`letter-${colorTitle[i]}`}>{title[i]}</span>)
         }
         setTitle(newTitle);
-    }, []);
+    }, [colorTitle]);
 
     return (
         <div className='formulaire'>
-            <h1>{title}</h1>
+            <h1 className='site--title'>{title}</h1>
             <form className='search'>
                 <div className={`search--container ${inputActive?'isActive': 'noActive'}`} ref={refInput}>
                     <div className="search--container--input">
@@ -45,7 +38,7 @@ const Form = () => {
                        <div>
                             <SearchList displayData={displayData} />
                             <div className="search--button">
-                                <button className="search--button--research">Recherche</button>
+                                <button onClick={search} className="search--button--research">Recherche</button>
                                 <button className="search--button--lucky">J'ai de la chance</button>
                             </div>
                         </div>
@@ -53,7 +46,7 @@ const Form = () => {
                     }
                 </div>
                 <div className="search--button">
-                    <button className="search--button--research">Recherche</button>
+                    <button onClick={search} className="search--button--research">Recherche</button>
                     <button className="search--button--lucky">J'ai de la chance</button>
                 </div>
                 <div className="search--text">
