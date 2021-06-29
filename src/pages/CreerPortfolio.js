@@ -1,19 +1,21 @@
 import React from 'react';
 import HeaderPage from './../components/HeaderPage';
 import LightTitle from './../components/LightTitle';
-
+import { BsCaretRightFill } from 'react-icons/bs';
 import '../sass/CreerPortfolio.sass';
 
 const CreerPortfolio = () => {
     return (
         <div className='creerPortfolio'>
             <HeaderPage />
+            <div className="header">
+                <h1>Création de portfolio</h1>
+            </div>  
             <div className="create">
-                <h1><LightTitle word='Création' /> portfolio</h1>
                 <h2>Créez votre portfolio <LightTitle word='Original' /> </h2>
                 <ul>
-                    <li><LightTitle word='Attirer' /> plus de visiteur sur votre site</li>
-                    <li><LightTitle word='Avoir' /> un portfolio unique</li>
+                    <li><BsCaretRightFill size="16" /> Attirer plus de visiteurs sur votre site</li>
+                    <li><BsCaretRightFill size="16" /> Ayez un portfolio unique</li>
                 </ul>
                 <p>
                     Contactez-moi par email pour plus de renseignements

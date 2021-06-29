@@ -1,9 +1,5 @@
 import React from 'react';
-import HeaderPage from './../components/HeaderPage';
-import LightTitle from './../components/LightTitle';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import '../sass/realisation.sass';
 import img1 from '../assets/images/thebestwo/calendar-view-7.png';
 import img2 from '../assets/images/thebestwo/calendar-view-10.png';
@@ -21,63 +17,34 @@ import img13 from '../assets/images/thebestwo/setting-interest.png';
 import img14 from '../assets/images/thebestwo/shop-view-1.png';
 import img15 from '../assets/images/thebestwo/stats-card-1.png';
 import { Link } from 'react-router-dom';
+import HeaderSearch from './../components/HeaderSearch';
+import RealImage from './../components/RealImage';
 
 const Realisations = () => {
+    const search = "realisations";
+
     return (
         <div className='realisations'>
-            <HeaderPage />
             <div>
-                <h1><LightTitle word='Réalisations' /></h1>
-                <Carousel width='300px'>
-                    <div>
-                        <img src={img1} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img2} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img3} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img4} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img5} alt='example' />
-                        {/* <p className="legend">Legend 3</p> */}
-                    </div>
-                    <div>
-                        <img src={img6} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img7} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img8} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img9} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img10} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img11} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img12} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img13} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img14} alt='example' />
-                    </div>
-                    <div>
-                        <img src={img15} alt='example' />
-                    </div>
-                </Carousel>
+                <HeaderSearch research={search} />
+                <div className='realisations--img'>
+                    <RealImage image={img1} text='Agenda'/>
+                    <RealImage image={img2} text='Tâches à réaliser'/>
+                    <RealImage image={img3} text='Calendrier'/>
+                    <RealImage image={img4} text='Agenda journalier'/>
+                    <RealImage image={img5} text='Évenements à venir'/>
+                    <RealImage image={img6} text='Agenda de la semaine'/>
+                    <RealImage image={img7} text='Agenda journalier'/>
+                    <RealImage image={img8} text="Calendrier / création d'événement"/>
+                    <RealImage image={img9} text='Modifier une photo'/>
+                    <RealImage image={img10} text="Page d'actualité"/>
+                    <RealImage image={img11} text='Modifier une photo'/>
+                    <RealImage image={img12} text='Page de profil'/>
+                    <RealImage image={img13} text='Intérêts'/>
+                    <RealImage image={img14} text='Présentation de produits'/>
+                    <RealImage image={img15} text='Page de paiement'/>
+                </div>
                 <Link to="/creer-portfolio" className='link-btn'>Je veux un site !</Link>
-
             </div>
         </div>
     );

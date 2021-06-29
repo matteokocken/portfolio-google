@@ -1,4 +1,5 @@
 .realisations
+    padding-bottom: 10px
     > div
         text-align: center
     .carousel.carousel-slider
@@ -6,6 +7,48 @@
         border-radius: 20px
         padding: 5px
         margin: auto
+    .realisations--img
+        padding-top: 40px
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        gap: 40px
+        justify-content: center
+        img
+            cursor: pointer
+            height: 222px
+            border: solid 1px #f7f7f7
+            &:hover
+                box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .3)
+        p
+            cursor: pointer
+            color: #3c4043
+            text-align: left
+            &:hover
+                text-decoration: underline
+
+    .isOpen
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(0,0,0,0.8)
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-direction: column
+        img
+            height: 90vh
+        p
+            background-color: #111
+            color: white
+            border-radius: 5px
+            padding: 5px
+            &:hover
+                text-decoration: none
+    .link-btn
+        margin-top: 50px
 @media all and (max-width: 500px)
     h1
         font-size: 3em

@@ -8,43 +8,51 @@
     {
         "name": "Compétences",
         "altText": "compétences competence skills",
-        "link": "/skills"
+        "link": "/skills",
+        "description": "Compétences, langages et outils utilisés pour la création de vos sites."
     },
     {
         "name": "Réalisations",
         "altText": "realisation réalisations projet création creation",
-        "link": "/realisations"
+        "link": "/realisations",
+        "description": "Découvrez mes réalisations en suivant ce lien"
     },
     {
         "name": "Linkedin",
         "altText": "linkedin",
         "link": "https://www.linkedin.com/in/matteo-kocken-2b098a121/",
-        "linkExt": true
+        "linkExt": true,
+        "description": "Découvrez mon profil Linkedin en suivant ce lien."
     },
     {
         "name": "À propos",
         "altText": "à propos a propos",
-        "link": "/a-propos"
+        "link": "/a-propos",
+        "description": "Je suis développeur et intégrateur web situé à Poitiers. Je m'occupe..." 
     },
     {
         "name": "Je veux créer mon portfolio",
         "altText": "je veux créer mon portfolio je veux creer mon portfolio création portfolio creation portfolio",
-        "link": "/creer-portfolio"
+        "link": "/creer-portfolio",
+        "description": "Créez votre portfolio Original. Attirer plus de visiteurs sur votre site. Ayez un portfolio unique..."
     },
     {
         "name": "Fonctionnement",
         "altText": "fonctionnement fonctionement",
-        "link": "/fonctionnement"
+        "link": "/fonctionnement",
+        "description": "Découvrez comment fonctionne ce site..."
     },
     {
         "name": "Portfolio classique",
         "altText": "portfolio classique",
         "link": "http://matteokocken.fr/",
-        "linkExt": true
+        "linkExt": true,
+        "description": "Ayant plusieurs années d'expérience dans le développement web, mon objectif est de mettre mes compétences à votre service..."
     },
     {
         "name": "Mentions légales",
         "altText": "mentions legales mentions legales mention legale mentions-legales",
-        "link": "/mentions-legales"
+        "link": "/mentions-legales",
+        "description": "Informations légales"
     }
 ]

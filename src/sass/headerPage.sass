@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap')
+.menu
+    position: fixed
+    top: 0px
+    left: 0
+    width: 100px !important
+    max-width: 100vw !important
+    z-index: 999
+    align-items: start !important
+    justify-content: start !important
+    .shadow
+        position: absolute
+        right: 0px
+        z-index: 5
+        top: 0px
+        height: 100vh
+        width: calc(100vw)
+        background-color: rgba(50, 50, 50, 0.5)
+    .content
+        z-index: 10
+        position: fixed
+        top: 0px
+        left: -300px
+        bottom: 0px
+        right: 0px
+        width: 250px !important
+        max-width: 100vw !important
+        background-color: white
+        box-shadow: 0 5.5px 5px 0 rgba(0, 0, 0, 0.24)
+        h2
+            padding: 0px 24px
+            height: 56px
+            line-height: 56px
+            border-bottom: 1px solid #eee
+        ul
+            margin-top: 0px
+            display: grid
+            list-style: none
+            text-align: left 
+            li
+                padding: 16px 24px
+                cursor: pointer
+                display: grid
+                grid-auto-flow: column
+                align-items: center
+                justify-content: start
+                grid-gap: 10px
+                svg
+                    position: relative
+                    top: -2px
+                    path
+                        fill: #3c4043
+            a
+                font-family: 'Roboto', sans-serif
+                font-weight: 500
+                font-size: 14px
+                color: #3c4043
+                width: 100%
+                &:hover
+                    background-color: rgba(0,0,0,0.04)
+            .is-active
+                background-color: rgba(0,0,0,0.04)
+                color: #4285F4 !important
+                svg
+                    path
+                        fill: #4285F4 !important
+    button
+        padding: 0
+        border: none
+        font-size: 24px
+        background-color: transparent
+        width: 48px
+        height: 48px
+        cursor: pointer
+        display: grid
+        align-items: center
+        justify-content: center
+        transition: .4s
+        margin: 8px 8px 8px 16px
+        &:hover
+            background-color: rgba(0,0,0,0.12)
+            border-radius: 100px
+.menu--open
+    bottom: 0px
+    width: 100vw !important
+    .content
+        left: 0px
+        transition: 4s

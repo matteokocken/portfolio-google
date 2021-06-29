@@ -6,14 +6,14 @@ import SearchList from './SearchList';
 
 
 const Form = () => {
-    const t = "Matteo"
+    const t = "Matteo KOCKEN"
     const [title, setTitle] = useState();
     const [colorTitle, setColorTitle] = useState([]);
 
     const { inputActive, refInput, inputIn, updateInput, displayData, search } = useForm(null);
 
     useEffect(() => {
-        setColorTitle(['blue', 'red', 'yellow', 'blue', 'green', 'red']);
+        setColorTitle(['blue', 'red', 'green', 'blue', 'yellow', 'red','blue', 'red', 'yellow', 'blue', 'green', 'red', 'green',]);
     }, []);
     useEffect(() => {
         let newTitle = [];
@@ -26,7 +26,7 @@ const Form = () => {
     return (
         <div className='formulaire'>
             <h1 className='site--title'>{title}</h1>
-            <form className='search'>
+            <form className='search' onSubmit={search} >
                 <div className={`search--container ${inputActive?'isActive': 'noActive'}`} ref={refInput}>
                     <div className="search--container--input">
                         <label htmlFor="search-bar" className="search--container--label"><MdSearch size={20} color={'#9aa0a6'} /></label>

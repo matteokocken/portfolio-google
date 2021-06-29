@@ -51,7 +51,9 @@ const App = () => {
           <MentionsLegales />
         </Route>
         <Route path='/realisations'>
-          <Realisations />
+          <HomeContext.Provider value={{ isAppOpen, isProfilOpen, refApp, refProfil, clickApp, clickProfil }} >
+            <Realisations />
+          </HomeContext.Provider>
         </Route>
         <Route path='/skills'>
           <Skills />
