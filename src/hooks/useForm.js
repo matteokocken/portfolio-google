@@ -1,12 +1,16 @@
 import { useState, useRef, useEffect } from 'react';
-
 import searchList from '../data/search-list.json';
+import { useHistory } from "react-router-dom";
+
 
 const useForm = () => {
     const [inputActive, setInputActive] = useState(false);
     const [inputData, setInputData] = useState("");
     const [displayData, setDisplayData] = useState([]);
     const refInput = useRef(null);
+
+    let history = useHistory();
+
 
     const inputIn = () => {
         setInputActive(true);
@@ -30,7 +34,8 @@ const useForm = () => {
     const search = (e) => {
         e.preventDefault();
         if(inputData !== "") {
-            window.location.href = '/search/' + inputData;
+            const page = '/search/' + inputData;
+            history.push(page)
         }
     }
 
